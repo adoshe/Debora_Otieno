@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEBORA OTIENO - Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 36px;
+            text-align: center;
+        }
+
+        header p {
+            text-align: center;
+            margin: 0;
+        }
+
+        nav ul {
+            padding: 0;
+            list-style: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* About Section */
+        #about {
+            padding: 20px 0;
+            background: #fff;
+        }
+
+        #about h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        #about p {
+            text-align: center;
+            font-size: 18px;
+        }
+
+        /* Portfolio Section */
+        #portfolio {
+            padding: 20px 0;
+            background: #f9f9f9;
+        }
+
+        #portfolio h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-grid {
+            display: flex;
+            flex-direction: column; 
+            gap: 20px;
+        }
+
+        .portfolio-item {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 100%; /* Ensure full width */
+            text-align: center; /* Center-align content */
+        }
+
+        .portfolio-item h3 {
+            margin-top: 0;
+            font-size: 22px;
+            color: #333;
+        }
+
+        .portfolio-item ul {
+            text-align: left; /* Left-align bullet points */
+            display: inline-block;
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        .portfolio-item img {
+            width: 50%; /* Reduce the size of images */
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Lightbox Styles */
+        #lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        #lightbox img {
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Contact Section */
+        #contact {
+            padding: 20px 0;
+            background: #fff;
+        }
+
+        #contact h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        #contact p {
+            text-align: center;
+            font-size: 18px;
+        }
+
+        #contact a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>DEBORA OTIENO</h1>
+            <p> Data Scientist | GIS analyst | Remote Sensing specialist</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>As a Data Scientist with a back ground in Geospatial information science, I bring a wealth of experience in acquiring, analyzing, and visualizing geographic information to drive informed decision-making. My expertise spans data collection from diverse sources, spatial analysis, mapping, python automation, data visualization, and GIS database management. Moreover, I am proficient in utilizing GIS software tools and staying abreast of technological advancements in the field.</p>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="container">
+            <h2>My Work</h2>
+            <div class="portfolio-grid">
+                <!-- Dynamic project items will be injected here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Container -->
+    <div id="lightbox">
+        <img id="lightbox-img" src="#" alt="Lightbox Image">
+    </div>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>If you'd like to get in touch, feel free to email me at <a href="mailto:deboraotieno01@gmail.com">deboraotieno01@gmail.com</a>.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth Scrolling for Navigation Links
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Dynamic Portfolio Items with Multiple Images and Bullet Points
+        const projects = [
+            {
+                title: "Monitoring Aboveground Biomass of Karura Forest Using Sentinel 1 and Sentinel 2 from 2015 to 2022",
+
+                description: [
+                    "This project integrates advanced remote sensing and machine learning techniques to monitor and estimate the aboveground biomass (AGB) of Karura Forest over a period of seven years.",
+                    "I derived coherence values from Sentinel 1 radar data to generate the Canopy Height Model.",
+                    "I estimated the AGB by integrating Diameter at Breast Height (DBH), wood density, and canopy height using allometric equations."
+                ],
+                images: ["images/karura.jpg", "images/heighcalibration.jpg", "images/REALAGB.jpg"]
+            },
+            {
+                title: "Turkana Spatial Plan",
+                description: [
+                    "Conducted precise geographic data collection using handheld GPS devices, contributing to accurate mapping.",
+                    "Participated in setting up Ground Control Point beacons to ensure reliable data for site planning, enhancing the project's overall accuracy.",
+                    "Documented detailed minutes during project workshops, ensuring clear communication and accurate records of decisions and action items."
+                ],
+                images: ["images/beaconing.jpg", "images/datacollection.jpg", "images/workshop.jpg"]
+            },
+            {
+                title: "Data Operator at Digireg Kenya",
+                description: [
+
+                    "Worked with GIS software and databases to manage and manipulate spatial data, contributing to various mapping and spatial analysis projects.",
+                    "I contributed to the development of detailed maps and managed geospatial data as a Data Operator at DigiReg Kenya",
+                    "Collaborated with team members to streamline data processes and improve workflow efficiency, contributing to the successful completion of projects on time."
+                    
+                    
+                ],
+                 
+                images :[] // no images provided
+            }
+        ];
+
+        const portfolioGrid = document.querySelector('.portfolio-grid');
+
+        projects.forEach(project => {
+            const projectElement = document.createElement('div');
+            projectElement.classList.add('portfolio-item');
+
+            // Generate HTML for the project with title 
+            let projectHTML = `<h3>${project.title}</h3>`;
+
+            // Add descriptions with bullet points and images
+            projectHTML += '<ul>';
+            project.description.forEach((desc, index) => {
+                projectHTML += `<li>${desc}</li>`;
+                if (project.images[index]) {
+                    projectHTML += `<img src="${project.images[index]}" alt="${project.title} Image" class="portfolio-image">`;
+                }
+            });
+            projectHTML += '</ul>';
+
+            projectElement.innerHTML = projectHTML;
+            portfolioGrid.appendChild(projectElement);
+        });
+
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        document.addEventListener('click', function (e) {
+            if (e.target.classList.contains('portfolio-image')) {
+                lightboxImg.src = e.target.src;
+                lightbox.style.display = 'flex';
+            }
+        });
+
+        lightbox.addEventListener('click', function (e) {
+            if (e.target !== lightboxImg) {
+                lightbox.style.display = 'none';
+            }
+        });
+
+        // Form Submission Handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('formResponse').textContent = 'Thank you for your message!';
+            // Here you can add your form submission logic (e.g., AJAX request)
+            this.reset();
+        });
+    </script>
+</body>
+</html>
